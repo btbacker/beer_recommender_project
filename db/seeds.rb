@@ -1,3 +1,7 @@
+require './app/adapter/api_link.rb'
+
+ApiLink.get_data("Beer")
+
 # # "beers": "name", "country", "abv", "ibu"
 # beer1 = Beer.create(name: "Westvleteren 12", country: "Belgium", abv: 10.2, ibu: 36)
 # beer2 = Beer.create(name: "1500", country: "United States", abv: 5.5, ibu: 48)
@@ -20,7 +24,6 @@
 # like2 = Like.create(beer_id: 1, user_id: 2)
 # like3 = Like.create(beer_id: 2, user_id: 1)
 # like4 = Like.create(beer_id: 3, user_id: 2)
-
 
 # # "beer_flavors": "flavor_id", "beer_id"
 # 5.times do

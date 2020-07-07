@@ -1,1 +1,14 @@
-<h2><%= @beer_1 %></h2>
+<h2><%= "Your Flight" %></h2>
+
+<p><%= @first_flavor_beer_1.name %><br>
+<%= @first_flavor_beer_2.name %><br>
+<%= @second_flavor_beer_1.name %><br>
+<%= @second_flavor_beer_2.name %><br>
+<%= @third_flavor_beer_1.name %><br>
+<%= @third_flavor_beer_2.name %><br></p><br>
+
+<h4><%= "Are you happy with your flight selection?" %></h4>
+
+<%= button_to "Place an Order", new_order_path, :class => "button", :method => :get %> <br>
+<%= button_to "Like this Flight Selection", new_like_path, :class => "button", :method => :get %> <br>
+<%= button_to "Try Again", search_page_path, :class => "button", :method => :get %> <br>

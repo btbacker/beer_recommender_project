@@ -1,0 +1,8 @@
+<div class="main">
+  <%= flash[:message] %>
+  <%= form_for :auth do |f| %>
+    Username <%= f.text_field :username %>
+    Password <%= f.password_field :password %>
+    <%= f.submit "Login" %>
+  <% end %>
+</div>

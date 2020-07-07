@@ -5,4 +5,6 @@ class User < ApplicationRecord
     has_many :beers, through: :likes
     has_many :flights, through: :orders
 
+    has_secure_password
+
 end

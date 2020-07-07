@@ -1,12 +1,14 @@
 class ApiLink
 
     def self.get_data(beer)
-        # url = "https://sandbox-api.brewerydb.com/v2/?key=734d5ff175c02f5cc38fe7f8142e242b"
-        url = 'http://api.brewerydb.com/v2/search?key=734d5ff175c02f5cc38fe7f8142e242b&type=beer&q=Lagunitas'
+        url = 'http://api.brewerydb.com/v2/search?key=50883b154f39032a3ae35a12432c50cc&type=beer&q=ale?'
         res = RestClient.get(url)
         data = res.body
         json_converted = JSON.parse(data)
         byebug
+        # json_converted.map do |beer|
+        #     Beer.create
+        # end
     end
 
 end

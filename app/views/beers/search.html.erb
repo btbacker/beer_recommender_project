@@ -1,0 +1,11 @@
+<h2><%= "Choose Your Flavor Profile" %></h2>
+
+<%= form_tag(beers_path, method: :get) do %>
+    <p>
+      Flavor 1: <%= text_field_tag :flavor_1, params[:flavor_1] %><br>
+      Flavor 2: <%= text_field_tag :flavor_2, params[:flavor_2] %><br>
+      Flavor 3: <%= text_field_tag :flavor_3, params[:flavor_3] %><br>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+<% end %>
+    

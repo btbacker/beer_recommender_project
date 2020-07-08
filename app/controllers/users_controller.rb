@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    before_action :current_user
+    before_action :current_user, only: [:index, :show, :create]
     # before_action :redirect_user
  
     def index
@@ -27,10 +27,26 @@ class UsersController < ApplicationController
         end
     end
 
+    def edit
+        @user = User.find(params[:id])
+    end
+
+    def update
+        @user = User.find(params[:id])
+        if @user.update(user_params)
+            session[:user_id] = @user.id
+            redirect_to @user
+        else
+            flash[:message] = @user.errors.full_messages
+            render :edit
+        end
+    end
+
     def destroy
-        @user = User.find(user_params[:id])
+        # byebug
+        @user = User.find(current_user[:id])
         @user.delete
-        redirect_to users_path
+        redirect_to logout_path
     end
 
 private

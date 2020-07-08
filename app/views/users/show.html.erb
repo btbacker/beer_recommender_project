@@ -1,5 +1,8 @@
-<h2><%= "Hi #{@user.username}!" %></h2><br>
-<%= button_to "Logout", logout_path, :class => "button", :method => :get %> <br>
+<h2><%= "Hi #{@user.username}!" %></h2>
+<h4><%= "Current Location: #{@user.location}" %></h4><br>
+
+<%= button_to "Edit Profile", edit_user_path, :class => "button", :method => :post %> <br>
+<%= button_to "Delete Profile", user_path, :class => "button", :method => :delete %> <br>
 
 <h4><%= "Your Favourite Beers" %></h4>
 <% @user.likes.each do |like| %>

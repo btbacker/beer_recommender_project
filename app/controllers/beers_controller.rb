@@ -1,4 +1,6 @@
 class BeersController < ApplicationController
+    before_action :current_user
+    # before_action :redirect_user
 
     def index
 
@@ -18,28 +20,29 @@ class BeersController < ApplicationController
 
         @first_flavor = Flavor.where('descriptor LIKE ?', "%#{@flavor_1}%")
         @first_flavor_beer_1 = @first_flavor[0].beers.sample
-        # byebug
-        Flight.create(beer_id: @first_flavor_beer_1.id, order_id: 1)
+        # @flight_order_id = Flight.create(beer_id: @first_flavor_beer_1.id, order_id: 1)
+
         @first_flavor_beer_2 = @first_flavor[0].beers.sample
-        Flight.create(beer_id: @first_flavor_beer_2.id, order_id: 1)
+        # Flight.create(beer_id: @first_flavor_beer_2.id, order_id: 1)
 
         @second_flavor = Flavor.where('descriptor LIKE ?', "%#{@flavor_2}%")
         @second_flavor_beer_1 = @second_flavor[0].beers.sample
-        Flight.create(beer_id: @second_flavor_beer_1.id, order_id: 1)
+        # Flight.create(beer_id: @second_flavor_beer_1.id, order_id: 1)
         @second_flavor_beer_2 = @second_flavor[0].beers.sample
-        Flight.create(beer_id: @second_flavor_beer_2.id, order_id: 1)
+        # Flight.create(beer_id: @second_flavor_beer_2.id, order_id: 1)
 
         @third_flavor = Flavor.where('descriptor LIKE ?', "%#{@flavor_3}%")
         @third_flavor_beer_1 = @third_flavor[0].beers.sample
-        Flight.create(beer_id: @third_flavor_beer_1.id, order_id: 1)
+        # Flight.create(beer_id: @third_flavor_beer_1.id, order_id: 1)
         @third_flavor_beer_2 = @third_flavor[0].beers.sample
-        Flight.create(beer_id: @third_flavor_beer_2.id, order_id: 1)
+        # Flight.create(beer_id: @third_flavor_beer_2.id, order_id: 1)
 
         render :index
 
     end
 
     def show
+        @beer = Beer.find(params[:id])
     end
 
     private

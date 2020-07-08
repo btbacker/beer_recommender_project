@@ -5,13 +5,13 @@ class AuthController < ApplicationController
 
     def verify_username
         @user = User.find_by(username: params[:auth][:username])
-        if @user && @user.authenticate(params[:auth][:password])
-            session[:user_id] = @user.user_id
-            redirect_to users_path
+        #byebug #lol
+        if @user #&& @user.authenticate(params[:auth][:password])
+            session[:user_id] = @user.id
+            redirect_to user_path(@user)
         else flash[:message] = "Please enter your username and password"
             render :login
         end
-        redirect_to user_path(@user)
     end
 
     def logout

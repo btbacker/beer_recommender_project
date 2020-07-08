@@ -14,7 +14,7 @@
 <br>
 
 <%= form_for @order do |o| %>
-    <%= o.submit %><br><br>
+    <%= o.button :submit, beer_1: @beer_1 %><br><br>
 <% end %>
 
 <%= button_to "No, Let's Return to Flight Generator", search_page_path, :class => "button", :method => :get %> <br>

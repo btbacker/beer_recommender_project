@@ -1,13 +1,15 @@
 <h2><%= "Hi #{@user.username}!" %></h2>
-<h4><%= "Current Location: #{@user.location}" %></h4><br>
+<h4><%= "Current Location: #{@user.user_location}" %></h4><br>
 
-<%= button_to "Edit Profile", edit_user_path, :class => "button", :method => :post %> <br>
+<%= button_to "Edit Profile", edit_user_path, :class => "button", :method => :get %> <br>
 <%= button_to "Delete Profile", user_path, :class => "button", :method => :delete %> <br>
 
 <h4><%= "Your Favourite Beers" %></h4>
 <% @user.likes.each do |like| %>
     <%= link_to like.beer.name, beer_path(like.beer.id) %><br>
 <% end %><br><br>
+
+<%= button_to "Take a Look at Our Beers", flavors_path, :class => "button", :method => :get %> <br>
 
 <h4><%= "Your Flight Orders" %></h4>
 <h5><%= "Flight 1:" %></h5>

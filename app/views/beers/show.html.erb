@@ -1,6 +1,16 @@
-<h2><%= @beer.name %></h2>
+<h2><%= @beer.beer_name %></h2>
 
-<%= "Brewery: #{@beer.brewery}" %><br>
-<%= "Country: #{@beer.country}" %><br><br>
+<%= image_tag @beer.beer_image %><br><br>
 
-<%= button_to "Like this Beer", user_show_path, :class => "button", :method => :get %> <br>
+<%= "Style: #{@beer.beer_style}" %><br>
+<%= "ABV: #{@beer.abv}%" %><br>
+<%= "IBU: #{@beer.ibu}" %><br>
+<%= "Description: #{@beer.beer_description}" %><br><br>
+
+<h4><%= "Brewery: #{@beer.brewery}" %><br></h4>
+<%= "City: #{@beer.brewery_city}" %><br>
+<%= "Region: #{@beer.brewery_region}" %><br>
+<%= "Country: #{@beer.country}" %><br><br><br>
+
+<%= button_to "Like this Beer", new_like_path, params: {beer: @beer}, :class => "button", :method => :get %> <br>
+

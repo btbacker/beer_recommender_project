@@ -21,6 +21,7 @@ class BeersController < ApplicationController
         @first_flavor = Flavor.where('descriptor LIKE ?', "%#{@flavor_1}%")
         @first_flavor_beer_1 = @first_flavor[0].beers.sample
         # @flight_order_id = Flight.create(beer_id: @first_flavor_beer_1.id, order_id: 1)
+
         @first_flavor_beer_2 = @first_flavor[0].beers.sample
         # Flight.create(beer_id: @first_flavor_beer_2.id, order_id: 1)
 

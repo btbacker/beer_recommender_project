@@ -3,18 +3,21 @@
 
 <h4><%= "Please confirm that you would like to place an order for a flight containing the following beers:" %></h4>
 
-<%= @beer_1.name %><br>
-<%= @beer_2.name %><br>
-<%= @beer_3.name %><br>
-<%= @beer_4.name %><br>
-<%= @beer_5.name %><br>
-<%= @beer_6.name %><br>
+<%= @order.id %><br>
+<%= "#{@beer_1.beer_name} from #{@beer_1.brewery}" %><br>
+<%= "#{@beer_2.beer_name} from #{@beer_2.brewery}" %><br>
+<%= "#{@beer_3.beer_name} from #{@beer_3.brewery}" %><br>
+<%= "#{@beer_4.beer_name} from #{@beer_4.brewery}" %><br>
+<%= "#{@beer_5.beer_name} from #{@beer_5.brewery}" %><br>
+<%= "#{@beer_6.beer_name} from #{@beer_6.brewery}" %><br>
 
 <br>
 <br>
 
 <%= form_for @order do |o| %>
-    <%= o.button :submit, beer_1: @beer_1 %><br><br>
+    <%= o.button :submit %><br><br>
 <% end %>
+
+<%#= button_to "Yes", params: {beer_1: @beer_1, beer_2: @beer_2, beer_3: @beer_3, beer_4: @beer_4, beer_5: @beer_5, beer_6: @beer_6, order: @order}, method: :get, class: "btn btn-custom btn-sm" %><br>
 
 <%= button_to "No, Let's Return to Flight Generator", search_page_path, :class => "button", :method => :get %> <br>

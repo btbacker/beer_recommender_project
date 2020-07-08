@@ -13,11 +13,19 @@
 ActiveRecord::Schema.define(version: 2020_07_06_231229) do
 
   create_table "beers", force: :cascade do |t|
-    t.string "name"
+    t.string "beer_name"
     t.string "brewery"
+    t.string "beer_style"
+    t.string "beer_description"
     t.string "country"
     t.float "abv"
     t.integer "ibu"
+    t.string "beer_image"
+    t.string "brewery_city"
+    t.string "brewery_region"
+    t.integer "brewery_active"
+    t.float "brewery_latitude"
+    t.float "brewery_longitude"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -58,7 +66,7 @@ ActiveRecord::Schema.define(version: 2020_07_06_231229) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.string "location"
+    t.string "user_location"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

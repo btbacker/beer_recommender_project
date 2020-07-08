@@ -1,0 +1,5 @@
+<h2><%= "Search for Beers by Flavor Profile" %></h2>
+
+<% @flavors.each do |flavor| %>
+    <%= link_to flavor.descriptor, flavor %><br>
+<% end %>

@@ -1,2 +1,20 @@
-<h2><%= "Your Flight" %></h2>
+<h2><%= "Your Flight" %></h2><br>
 
+
+<h4><%= "Please confirm that you would like to place an order for a flight containing the following beers:" %></h4>
+
+<%= @beer_1.name %><br>
+<%= @beer_2.name %><br>
+<%= @beer_3.name %><br>
+<%= @beer_4.name %><br>
+<%= @beer_5.name %><br>
+<%= @beer_6.name %><br>
+
+<br>
+<br>
+
+<%= form_for @order do |o| %>
+    <%= o.submit %><br><br>
+<% end %>
+
+<%= button_to "No, Let's Return to Flight Generator", search_page_path, :class => "button", :method => :get %> <br>

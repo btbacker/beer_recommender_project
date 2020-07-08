@@ -1,1 +1,6 @@
-<%= "#{@first_flavor_beer_1}" %>
+<h2><%= @beer.name %></h2>
+
+<%= "Brewery: #{@beer.brewery}" %><br>
+<%= "Country: #{@beer.country}" %><br><br>
+
+<%= button_to "Like this Beer", new_like_path, :class => "button", :method => :get %> <br>

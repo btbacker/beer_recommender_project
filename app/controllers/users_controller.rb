@@ -1,7 +1,15 @@
 class UsersController < ApplicationController
+
+    before_action :current_user
+    # before_action :redirect_user
  
+    def index
+    
+    end
+
     def show
         @user = User.find(params[:id])
+        # byebug
     end
 
     def new
@@ -11,6 +19,7 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save 
+            session[:user_id] = @user.id
             redirect_to @user
         else
             flash[:message] = @user.errors.full_messages

@@ -1,8 +1,12 @@
-<div class="main">
-  <%= flash[:message] %>
-  <%= form_for :auth do |f| %>
-    Username <%= f.text_field :username %>
-    Password <%= f.password_field :password %>
-    <%= f.submit "Login" %>
-  <% end %>
-</div>
+<h2><%= "Welcome to the Beer Recommender App!" %></h2><br>
+
+<h4><%= "Please enter your username and password to gain access to the site:" %></h4>
+
+<br>
+
+<%= flash[:message] %>
+<%= form_for :auth do |f| %>
+  Username: <%= f.text_field :username %><br><br>
+  Password: <%= f.password_field :password %><br><br><br>
+  <%= f.submit "Login" %>
+<% end %>

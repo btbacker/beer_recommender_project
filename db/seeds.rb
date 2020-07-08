@@ -1,5 +1,9 @@
 require './app/adapter/api_link.rb'
 
+Beer.destroy_all 
+Flavor.destroy_all 
+BeersFlavor.destroy_all 
+
 # ApiLink.get_data("Beer")
 
 # # "beers": "name", "country", "abv", "ibu"
@@ -55,21 +59,21 @@ flavor15 = Flavor.create(descriptor: "Tart")
 beers_flavor1 = BeersFlavor.create(flavor_id: flavor7.id, beer_id: beer1.id)
 beers_flavor2 = BeersFlavor.create(flavor_id: flavor6.id, beer_id: beer1.id)
 beers_flavor3 = BeersFlavor.create(flavor_id: flavor10.id, beer_id: beer1.id)
-beers_flavor4 = BeersFlavor.create(flavor_id: flavor8, beer_id: beer2.id)
-beers_flavor5 = BeersFlavor.create(flavor_id: flavor10, beer_id: beer2.id)
-beers_flavor6 = BeersFlavor.create(flavor_id: flavor3, beer_id: beer2.id)
-beers_flavor7 = BeersFlavor.create(flavor_id: flavor8, beer_id: beer3.id)
-beers_flavor8 = BeersFlavor.create(flavor_id: flavor11, beer_id: beer3.id)
-beers_flavor9 = BeersFlavor.create(flavor_id: flavor3, beer_id: beer3.id)
-beers_flavor10 = BeersFlavor.create(flavor_id: flavor6, beer_id: beer4.id)
-beers_flavor11 = BeersFlavor.create(flavor_id: flavor10, beer_id: beer4.id)
-beers_flavor12 = BeersFlavor.create(flavor_id: flavor4, beer_id: beer4.id)
-beers_flavor13 = BeersFlavor.create(flavor_id: flavor5, beer_id: beer5.id)
-beers_flavor14 = BeersFlavor.create(flavor_id: flavor10, beer_id: beer5.id)
-beers_flavor15 = BeersFlavor.create(flavor_id: flavor11, beer_id: beer5.id)
-beers_flavor16 = BeersFlavor.create(flavor_id: flavor3, beer_id: beer6.id)
-beers_flavor17 = BeersFlavor.create(flavor_id: flavor10, beer_id: beer6.id)
-beers_flavor18 = BeersFlavor.create(flavor_id: flavor13, beer_id: beer6.id)
+beers_flavor4 = BeersFlavor.create(flavor_id: flavor8.id, beer_id: beer2.id)
+beers_flavor5 = BeersFlavor.create(flavor_id: flavor10.id, beer_id: beer2.id)
+beers_flavor6 = BeersFlavor.create(flavor_id: flavor3.id, beer_id: beer2.id)
+beers_flavor7 = BeersFlavor.create(flavor_id: flavor8.id, beer_id: beer3.id)
+beers_flavor8 = BeersFlavor.create(flavor_id: flavor11.id, beer_id: beer3.id)
+beers_flavor9 = BeersFlavor.create(flavor_id: flavor3.id, beer_id: beer3.id)
+beers_flavor10 = BeersFlavor.create(flavor_id: flavor6.id, beer_id: beer4.id)
+beers_flavor11 = BeersFlavor.create(flavor_id: flavor10.id, beer_id: beer4.id)
+beers_flavor12 = BeersFlavor.create(flavor_id: flavor4.id, beer_id: beer4.id)
+beers_flavor13 = BeersFlavor.create(flavor_id: flavor5.id, beer_id: beer5.id)
+beers_flavor14 = BeersFlavor.create(flavor_id: flavor10.id, beer_id: beer5.id)
+beers_flavor15 = BeersFlavor.create(flavor_id: flavor11.id, beer_id: beer5.id)
+beers_flavor16 = BeersFlavor.create(flavor_id: flavor3.id, beer_id: beer6.id)
+beers_flavor17 = BeersFlavor.create(flavor_id: flavor10.id, beer_id: beer6.id)
+beers_flavor18 = BeersFlavor.create(flavor_id: flavor13.id, beer_id: beer6.id)
 # beers_flavor19 = BeersFlavor.create(flavor_id: , beer_id: beer7.id)
 # beers_flavor20 = BeersFlavor.create(flavor_id: , beer_id: beer7.id)
 # beers_flavor21 = BeersFlavor.create(flavor_id: , beer_id: beer7.id)

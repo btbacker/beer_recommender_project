@@ -7,4 +7,13 @@ class User < ApplicationRecord
 
     has_secure_password
 
+    def get_user_flight_beers
+        @user = self
+        beers = []
+        @user.flights.each do |flight|
+            beers << Beer.all.find(flight.beer_id)
+        end
+        beers
+    end
+
 end

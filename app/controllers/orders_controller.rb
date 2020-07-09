@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
 
     before_action :current_user
-    before_action :redirect_user
+    # before_action :redirect_user
 
     def show
         @order = Order.find(params[:id])

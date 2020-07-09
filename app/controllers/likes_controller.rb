@@ -4,7 +4,6 @@ class LikesController < ApplicationController
     before_action :redirect_user
 
     def show
-        
     end
     
     def new

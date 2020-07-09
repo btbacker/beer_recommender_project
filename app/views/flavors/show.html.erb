@@ -1,6 +1,6 @@
-<h2><%= "Our #{@flavor.descriptor} Beers" %></h2><br><br>
+<h2><%= "Our #{@flavor.descriptor} Beers" %></h2><br>
 
-<% @flavor.beers.each do |beer| %>
+<% @flavor.beers.uniq.each do |beer| %>
     <h4><%= link_to "#{beer.beer_name} from #{beer.brewery}", beer %></h4>
     <%= image_tag beer.beer_image %><br><br><br>
 <% end %>

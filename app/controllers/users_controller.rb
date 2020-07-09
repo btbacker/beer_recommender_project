@@ -9,7 +9,10 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
-        # byebug
+        @beers = []
+        @user.flights.each do |flight|
+            @beers << Beer.all.find(flight.beer_id)
+        end
     end
 
     def new

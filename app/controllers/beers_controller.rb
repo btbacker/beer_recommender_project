@@ -28,14 +28,6 @@ class BeersController < ApplicationController
             @flavor_3 = params[:flavor_3]
         end
 
-<<<<<<< Updated upstream
-        @first_flavor_beer_1 = Beer.find_beers(@flavor_1)
-        @first_flavor_beer_2 = Beer.find_beers(@flavor_1)
-        @second_flavor_beer_1 = Beer.find_beers(@flavor_1)
-        @second_flavor_beer_2 = Beer.find_beers(@flavor_1)
-        @third_flavor_beer_1 = Beer.find_beers(@flavor_1)
-        @third_flavor_beer_2 = Beer.find_beers(@flavor_1)
-=======
         # MOVE TO MODEL
 
         # @first_flavor = Flavor.where('descriptor LIKE ?', "%#{@flavor_1}%")
@@ -55,7 +47,6 @@ class BeersController < ApplicationController
         # # Flight.create(beer_id: @third_flavor_beer_1.id, order_id: 1)
         # @third_flavor_beer_2 = @third_flavor[0].beers.sample
         # # Flight.create(beer_id: @third_flavor_beer_2.id, order_id: 1)
->>>>>>> Stashed changes
 
         render :index
 

@@ -1,19 +1,7 @@
 <h2><%= "Your Flight" %></h2>
 
 <%#= @flight_order_id.order_id %>
-<<<<<<< Updated upstream
-<p><%= link_to "Beer # 1: #{@first_flavor_beer_1.beer_name} from #{@first_flavor_beer_1.brewery}", beer_path(@first_flavor_beer_1) %><br>
-<%= link_to "Beer # 2: #{@first_flavor_beer_2.beer_name} from #{@first_flavor_beer_2.brewery}", beer_path(@first_flavor_beer_2) %><br>
-<%= link_to "Beer # 3: #{@second_flavor_beer_1.beer_name} from #{@second_flavor_beer_1.brewery}", beer_path(@second_flavor_beer_1) %><br>
-<%= link_to "Beer # 4: #{@second_flavor_beer_2.beer_name} from #{@second_flavor_beer_2.brewery}", beer_path(@second_flavor_beer_2) %><br>
-<%= link_to "Beer # 5: #{@third_flavor_beer_1.beer_name} from #{@third_flavor_beer_1.brewery}", beer_path(@third_flavor_beer_1) %><br>
-<%= link_to "Beer # 6: #{@third_flavor_beer_2.beer_name} from #{@third_flavor_beer_2.brewery}", beer_path(@third_flavor_beer_2) %><br></p><br>
 
-<h4><%= "Are you happy with your flight selection?" %></h4>
-
-<%= button_to "Yes, I'm happy!", new_order_path, params: {beer_1: @first_flavor_beer_1, beer_2: @first_flavor_beer_2, beer_3: @second_flavor_beer_1, beer_4: @second_flavor_beer_2, beer_5: @third_flavor_beer_1, beer_6: @third_flavor_beer_2 }, method: :get, class: "btn btn-custom btn-sm"%><br>
-<%= button_to "No, I'd like to try again", search_page_path, :class => "button", :method => :get %> <br>
-=======
 <p><%#= "#{@first_flavor_beer_1.beer_name} from #{@first_flavor_beer_1.brewery}" %><br>
 <%#= "#{@first_flavor_beer_2.beer_name} from #{@first_flavor_beer_2.brewery}" %><br>
 <%#= "#{@second_flavor_beer_1.beer_name} from #{@second_flavor_beer_1.brewery}" %><br>
@@ -26,4 +14,3 @@
 <%#= button_to "Place an Order", new_order_path, params: {beer_1: @first_flavor_beer_1, beer_2: @first_flavor_beer_2, beer_3: @second_flavor_beer_1, beer_4: @second_flavor_beer_2, beer_5: @third_flavor_beer_1, beer_6: @third_flavor_beer_2 }, method: :get, class: "btn btn-custom btn-sm"%><br>
 <%= button_to "Like this Flight Selection", new_like_path, :class => "button", :method => :get %> <br>
 <%= button_to "Try Again", search_page_path, :class => "button", :method => :get %> <br>
->>>>>>> Stashed changes

@@ -17,18 +17,27 @@ class OrdersController < ApplicationController
     
     def new
         @current_user = current_user
-        @beer_1 = Beer.find(params[:beer_1])
-        @beer_2 = Beer.find(params[:beer_2])
-        @beer_3 = Beer.find(params[:beer_3])
-        @beer_4 = Beer.find(params[:beer_4])
-        @beer_5 = Beer.find(params[:beer_5])
-        @beer_6 = Beer.find(params[:beer_6])
+        @beer_ids = params[:beers]
+        @beers = []
+        @beer_ids.each do |beer|
+            @beers << Beer.find(beer)
+        end
+        # byebug
+
+        # @beer_1 = Beer.find(params[:beer_1])
+        # @beer_2 = Beer.find(params[:beer_2])
+        # @beer_3 = Beer.find(params[:beer_3])
+        # @beer_4 = Beer.find(params[:beer_4])
+        # @beer_5 = Beer.find(params[:beer_5])
+        # @beer_6 = Beer.find(params[:beer_6])
+
         @order = Order.new
     end
 
     def create
         @current_user = current_user
         @order = Order.create(user_id: current_user.id)
+        # byebug
         @beer_1 = Beer.find(params[:beer_1])
         Flight.create(beer_id: @beer_1.id, order_id: @order.id)
         @beer_2 = Beer.find(params[:beer_2])

@@ -2,7 +2,7 @@
 
 <%= form_for(:beer, url: beers_path, method: :get) do |f| %>
     <p>
-    <%= f.collection_check_boxes(:flavor_ids, Flavor.all, :id, :descriptor) %>
+    <%= f.collection_check_boxes(:flavor_ids, Flavor.all, :descriptor, :descriptor, :include_hidden => false) %>
        <%#= text_field_tag :flavor_1, params[:flavor_1] %><br><br>
        <%#= text_field_tag :flavor_2, params[:flavor_2] %><br><br>
        <%#= text_field_tag :flavor_3, params[:flavor_3] %><br><br>

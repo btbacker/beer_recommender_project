@@ -13,40 +13,36 @@ class BeersController < ApplicationController
     end
     
     def index
-            byebug
-        if params[:flavor_1]
-            @flavor_1 = params[:flavor_1]
-        else
-            flash[:message] = @flavor_1.errors.full_messages
+
+        if params["beer"]["flavor_ids"]
+            # flavor.sample = params["beer"]["flavor_ids"][1]
+           flavors =  params["beer"]["flavor_ids"].map {|flavor| flavor}
+        #    byebug
         end
 
-        if params[:flavor_2]
-            @flavor_2 = params[:flavor_2]
+        @beers = []
+        6.times do 
+            @beers << Beer.find_beers(flavors.sample)
         end
 
-        if params[:flavor_3]
-            @flavor_3 = params[:flavor_3]
-        end
+        # byebug
 
-        # MOVE TO MODEL
+        # @first_flavor_beer_1 = Beer.find_beers(flavors.sample)
+        # @first_flavor_beer_2 = Beer.find_beers(flavors.sample)
+        # @second_flavor_beer_1 = Beer.find_beers(flavors.sample)
+        # @second_flavor_beer_2 = Beer.find_beers(flavors.sample)
+        # @third_flavor_beer_1 = Beer.find_beers(flavors.sample)
+        # @third_flavor_beer_2 = Beer.find_beers(flavors.sample)
 
-        # @first_flavor = Flavor.where('descriptor LIKE ?', "%#{@flavor_1}%")
-        # @first_flavor_beer_1 = @first_flavor[0].beers.sample
-        # # @flight_order_id = Flight.create(beer_id: @first_flavor_beer_1.id, order_id: 1)
-        # @first_flavor_beer_2 = @first_flavor[0].beers.sample
-        # # Flight.create(beer_id: @first_flavor_beer_2.id, order_id: 1)
+        # if params[:flavor_2]
+        #     @flavor_2 = params[:flavor_2]
+        # end
 
-        # @second_flavor = Flavor.where('descriptor LIKE ?', "%#{@flavor_2}%")
-        # @second_flavor_beer_1 = @second_flavor[0].beers.sample
-        # # Flight.create(beer_id: @second_flavor_beer_1.id, order_id: 1)
-        # @second_flavor_beer_2 = @second_flavor[0].beers.sample
-        # # Flight.create(beer_id: @second_flavor_beer_2.id, order_id: 1)
+        # if params[:flavor_3]
+        #     @flavor_3 = params[:flavor_3]
+        # end
 
-        # @third_flavor = Flavor.where('descriptor LIKE ?', "%#{@flavor_3}%")
-        # @third_flavor_beer_1 = @third_flavor[0].beers.sample
-        # # Flight.create(beer_id: @third_flavor_beer_1.id, order_id: 1)
-        # @third_flavor_beer_2 = @third_flavor[0].beers.sample
-        # # Flight.create(beer_id: @third_flavor_beer_2.id, order_id: 1)
+        # byebug
 
         render :index
 

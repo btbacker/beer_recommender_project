@@ -8,7 +8,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <% if logged_in? %>
-      <%= button_to "Logout", logout_path, :class => "button", :method => :get %> <br>
+      <%= button_to "Logout", logout_path, :class => "button", :method => :get %><br>
+      <%= button_to "Home Page", user_path(current_user), :class => "button", :method => :get %> <br>
         <% else %>
         <%= button_to "Create a New User", new_user_path, :class => "button", :method => :get %>
     <% end %>

@@ -6,14 +6,15 @@
 
 <h4><%= "Your Favourite Beers" %></h4>
 <% @user.likes.each do |like| %>
-    <%= link_to like.beer.name, beer_path(like.beer.id) %><br>
+    <%= link_to like.beer.beer_name, beer_path(like.beer.id) %><br>
 <% end %><br><br>
 
 <%= button_to "Take a Look at Our Beers", flavors_path, :class => "button", :method => :get %> <br>
 
 <h4><%= "Your Flight Orders" %></h4>
-<h5><%= "Flight 1:" %></h5>
-<% @user.get_user_flight_beers.each do |beer| %>
-    <%= beer.name %><br>
-<% end %><br><br>
+<%# @user.orders.each do |order| %>
+    <%# order.beers.each do |beer| %><br>
+        <%#= beer.beer_name %>
+    <%# end %>
+<%# end %><br><br>
 <%= button_to "Search for Another Flight", search_page_path, :class => "button", :method => :get %> <br>

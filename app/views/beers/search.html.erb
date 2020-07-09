@@ -2,6 +2,7 @@
 
 <%= form_tag(beers_path, method: :get) do %>
     <p>
+      <%= flash[:message] %>
       Flavor 1: <%= text_field_tag :flavor_1, params[:flavor_1] %><br><br>
       Flavor 2: <%= text_field_tag :flavor_2, params[:flavor_2] %><br><br>
       Flavor 3: <%= text_field_tag :flavor_3, params[:flavor_3] %><br><br>

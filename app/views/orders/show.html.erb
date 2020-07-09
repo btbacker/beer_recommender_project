@@ -2,4 +2,9 @@
 
 <h4><%= "Your order number is ##{@order.id}." %></h4>
 
+<h4><%= "Order Details:" %></h4>
+<% @beers.each do |beer| %>
+    <%= link_to "#{beer.beer_name} from #{beer.brewery}", beer %><br>
+<% end %><br>
+
 <%= button_to "Return to Your Home Page", user_path(@order.user_id), :class => "button", :method => :get %> <br>

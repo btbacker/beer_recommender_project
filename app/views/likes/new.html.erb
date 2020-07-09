@@ -1,6 +1,8 @@
-<%= "Confirm that you want to like this beer" %>
+<h4><%= "Are you sure you'd like to add this beer to your favorites list?" %></h4>
 
 <%= form_for @like do |l| %>
     <%= hidden_field_tag(:beer, @beer) %>
-    <%= l.button :submit %><br><br>
+    <%= l.submit "Yes!" %><br><br>
 <% end %>
+
+<%= button_to "No", beer_path(@beer), :class => "button", :method => :get %> <br>

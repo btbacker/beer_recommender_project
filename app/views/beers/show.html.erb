@@ -12,5 +12,11 @@
 <%= "Region: #{@beer.brewery_region}" %><br>
 <%= "Country: #{@beer.country}" %><br><br><br>
 
-<%= button_to "Like this Beer", new_like_path, params: {beer: @beer}, :class => "button", :method => :get %> <br>
+<% if @like_status == true %>
+    <%= button_to "Unlike this Beer", like_path, params: {beer: @beer, like: @like}, :class => "button", :method => :delete %> <br>
+<% else %>
+    <%= button_to "Like this Beer", new_like_path, params: {beer: @beer}, :class => "button", :method => :get %> <br>
+<% end %>
+
+<%= button_to "Return to Flavors List", flavors_path, :class => "button", :method => :get %> <br>
 

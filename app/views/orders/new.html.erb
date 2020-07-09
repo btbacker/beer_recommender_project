@@ -1,24 +1,26 @@
-<h2><%= "Your Flight" %></h2><br>
+<h2><%= "Your Flight" %></h2>
 
 
 <h4><%= "Please confirm that you would like to place an order for a flight containing the following beers:" %></h4>
 
-<%= @order.id %><br>
-<%= "#{@beer_1.beer_name} from #{@beer_1.brewery}" %><br>
-<%= "#{@beer_2.beer_name} from #{@beer_2.brewery}" %><br>
-<%= "#{@beer_3.beer_name} from #{@beer_3.brewery}" %><br>
-<%= "#{@beer_4.beer_name} from #{@beer_4.brewery}" %><br>
-<%= "#{@beer_5.beer_name} from #{@beer_5.brewery}" %><br>
-<%= "#{@beer_6.beer_name} from #{@beer_6.brewery}" %><br>
+<%= "Beer # 1: #{@beer_1.beer_name} from #{@beer_1.brewery}" %><br>
+<%= "Beer # 2: #{@beer_2.beer_name} from #{@beer_2.brewery}" %><br>
+<%= "Beer # 3: #{@beer_3.beer_name} from #{@beer_3.brewery}" %><br>
+<%= "Beer # 4: #{@beer_4.beer_name} from #{@beer_4.brewery}" %><br>
+<%= "Beer # 5: #{@beer_5.beer_name} from #{@beer_5.brewery}" %><br>
+<%= "Beer # 6: #{@beer_6.beer_name} from #{@beer_6.brewery}" %><br>
 
 <br>
 <br>
 
 <%= form_for @order do |o| %>
-    <%= hidden_field_tag(:beer_1, @beer_1) %>
-    <%= o.button :submit %><br><br>
+    <%= hidden_field_tag(:beer_1, @beer_1.id) %>
+    <%= hidden_field_tag(:beer_2, @beer_2.id) %>
+    <%= hidden_field_tag(:beer_3, @beer_3.id) %>
+    <%= hidden_field_tag(:beer_4, @beer_4.id) %>
+    <%= hidden_field_tag(:beer_5, @beer_5.id) %>
+    <%= hidden_field_tag(:beer_6, @beer_6.id) %>
+    <%= o.submit "Yes, I'd like to place an order" %><br><br>
 <% end %>
 
-<%#= button_to "Yes", params: {beer_1: @beer_1, beer_2: @beer_2, beer_3: @beer_3, beer_4: @beer_4, beer_5: @beer_5, beer_6: @beer_6, order: @order}, method: :get, class: "btn btn-custom btn-sm" %><br>
-
-<%= button_to "No, Let's Return to Flight Generator", search_page_path, :class => "button", :method => :get %> <br>
+<%= button_to "No, I'd like to return to the flight generator", search_page_path, :class => "button", :method => :get %> <br>

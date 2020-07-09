@@ -15,6 +15,7 @@
 <br>
 
 <%= form_for @order do |o| %>
+    <%= hidden_field_tag(:beer_1, @beer_1) %>
     <%= o.button :submit %><br><br>
 <% end %>
 

@@ -16,7 +16,10 @@ class Flavor < ApplicationRecord
         end
     end
 
-    def self.create_essential
-        essential_flavors = []
-    end
+    # def self.create_essential
+    #     essential_flavors = []
+    #     essential_flavors.each do |flavor|
+    #         Flavor.create(descriptor: flavor)
+    #     end
+    # end
 end

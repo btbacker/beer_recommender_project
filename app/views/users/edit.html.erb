@@ -1,4 +1,9 @@
+<br>
+<br>
+
 <h2><%= "Update Your Profile" %></h2>
+
+<br>
 
 <%= flash[:message] %>
 <%= form_for @user do |f| %>
@@ -7,3 +12,9 @@
     Location: <%=f.text_field :user_location %><br><br>
     <%=f.submit %>
 <% end %>
+
+<br><br>
+
+<p><%= "Would you like to delete your profile?" %></p>
+
+<%= button_to "Delete Profile", user_path, :class => "button", :method => :delete %> <br>

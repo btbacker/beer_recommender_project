@@ -1,3 +1,6 @@
+<br>
+<br>
+
 <h2><%= "Your Flight" %></h2>
 
 <%#= @flight_order_id.order_id %>
@@ -6,15 +9,17 @@
     <%= "#{beer.beer_name} from #{beer.brewery}" %><br>
 <% end %>
 
-<p><%#= "#{@first_flavor_beer_1.beer_name} from #{@first_flavor_beer_1.brewery}" %><br>
-<%#= "#{@first_flavor_beer_2.beer_name} from #{@first_flavor_beer_2.brewery}" %><br>
-<%#= "#{@second_flavor_beer_1.beer_name} from #{@second_flavor_beer_1.brewery}" %><br>
-<%#= "#{@second_flavor_beer_2.beer_name} from #{@second_flavor_beer_2.brewery}" %><br>
-<%#= "#{@third_flavor_beer_1.beer_name} from #{@third_flavor_beer_1.brewery}" %><br>
-<%#= "#{@third_flavor_beer_2.beer_name} from #{@third_flavor_beer_2.brewery}" %><br></p><br>
+<p><%#= "#{@first_flavor_beer_1.beer_name} from #{@first_flavor_beer_1.brewery}" %>
+<%#= "#{@first_flavor_beer_2.beer_name} from #{@first_flavor_beer_2.brewery}" %>
+<%#= "#{@second_flavor_beer_1.beer_name} from #{@second_flavor_beer_1.brewery}" %>
+<%#= "#{@second_flavor_beer_2.beer_name} from #{@second_flavor_beer_2.brewery}" %>
+<%#= "#{@third_flavor_beer_1.beer_name} from #{@third_flavor_beer_1.brewery}" %>
+<%#= "#{@third_flavor_beer_2.beer_name} from #{@third_flavor_beer_2.brewery}" %></p>
+
+<br>
 
 <h4><%= "Are you happy with your flight selection?" %></h4>
 
 <%#= button_to "Place an Order", new_order_path, params: {beer_1: @first_flavor_beer_1, beer_2: @first_flavor_beer_2, beer_3: @second_flavor_beer_1, beer_4: @second_flavor_beer_2, beer_5: @third_flavor_beer_1, beer_6: @third_flavor_beer_2 }, method: :get, class: "btn btn-custom btn-sm"%><br>
-<%= button_to "Place an Order", new_order_path, params: {beers: @beers}, method: :get, class: "btn btn-custom btn-sm"%><br>
+<%= button_to "Place an Order", new_order_path, params: {beers: @beers}, method: :get %><br>
 <%= button_to "Try Again", search_page_path, :class => "button", :method => :get %> <br>

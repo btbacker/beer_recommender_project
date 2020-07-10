@@ -1,12 +1,17 @@
-<h2><%= "Welcome to the Beer Recommender App!" %></h2><br>
-
-<h4><%= "Please enter your username and password to gain access to the site:" %></h4>
-
+<br>
 <br>
 
-<%= flash[:message] %>
+<h5><%= "Sign in to BeerFlight" %></h5><br>
+<% if flash.now[:alert] %>
+  <div class="alert alert-danger" role="alert">
+    Incorrect username or password.
+  </div>
+<% end %>
+
 <%= form_for :auth do |f| %>
-  Username: <%= f.text_field :username %><br><br>
-  Password: <%= f.password_field :password %><br><br><br>
-  <%= f.submit "Login" %>
+            <%= "Username" %>
+            <%= f.text_field :username %><br><br>
+            <%= "Password" %>
+            <%= f.password_field :password %><br><br>
+  <%= f.submit 'Sign in', :class => 'btn btn-success' %>
 <% end %>

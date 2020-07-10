@@ -5,17 +5,55 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-    <% if logged_in? %>
-      <%= button_to "Logout", logout_path, :class => "button", :method => :get %><br>
-      <%= button_to "Home Page", user_path(current_user), :class => "button", :method => :get %> <br>
-        <% else %>
-        <%= button_to "Create a New User", new_user_path, :class => "button", :method => :get %>
-    <% end %>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <% if logged_in? %>
+        <a class="navbar-brand" href="../users/<%= current_user.id %>">BrewFlight</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+          <li class="nav-item active">
+            <a class="nav-link" href="../users/<%= current_user.id %>"> Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="../users/<%= current_user.id %>/edit"> Edit Profile <span class="sr-only">(current)</span></a>
+          </li>
+
+          <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Our Beer Flavors
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="http://localhost:3000/flavors">Flavors</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+          </div>
+
+          </div>
+            <a <button class="btn btn-outline-success my-2 my-sm-0" href="http://localhost:3000/logout" type="submit">Log Out</button> </a>
+          <% else %>
+            <a class="navbar-brand" href="http://localhost:3000/login">BrewFlight</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a <button class="btn btn-outline-success my-2 my-sm-0" href="../users/new" type="submit">Create An Account</button> </a>
+          <% end %>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
     <%= yield %>
   </body>
 </html>

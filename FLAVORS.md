@@ -1,30 +1,30 @@
-Aromatic
-Banana
-Barrel aged
-Bitter
-Boozy
-Clean
-Dark
-Dry
-Fruity
-Funky
-Hazy
-Heavy
-Hoppy
-Juicy
-Lactose
-Light
-Malty
-Piney
-Refreshing
-Roasty
-Smoky
-Smooth
-Sour
-Spiced
-Strong
-Sweet
-Thick
-Thin
-Toffee
-Wheat
+Hoppy 1
+Wheat 2
+Fruity 3
+Aromatic 4
+Banana 5
+Barrel aged 6
+Bitter 7
+Boozy 8
+Clean 9
+Dark 10
+Dry 11
+Funky 13
+Hazy 14
+Heavy 15
+Juicy 17
+Lactose 18
+Light 19
+Malty 20
+Piney 21
+Refreshing 22
+Roasty 23
+Smoky 24
+Smooth 25
+Sour 26
+Spiced 27
+Strong 28
+Sweet 29
+Thick 30
+Thin 31
+Toffee 32

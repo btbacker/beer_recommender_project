@@ -1,7 +1,7 @@
 <br>
 <br>
 
-<h5><%= "Sign in to BeerFlight" %></h5><br>
+<h5><%= "Sign in to BrewFlight" %></h5><br>
 <% if flash.now[:alert] %>
   <div class="alert alert-danger" role="alert">
     Incorrect username or password.
@@ -12,13 +12,13 @@
     <p class="card-text">
       <%= form_for :auth do |f| %>
             <%= "Username" %><br>
-            <%= f.text_field :username %><br><br>
+            <%= f.text_field :username, :class => 'input' %><br><br>
             <%= "Password" %><br>
-            <%= f.password_field :password %><br><br>
-            <%= f.submit 'Sign in', :class => 'btn btn-success' %>
+            <%= f.password_field :password, :class => 'input' %><br><br>
+            <%= f.submit 'Sign in', :class => 'btn btn-success btn-block' %>
       <% end %>
       </p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <%# <a href="#" class="card-link">Card link</a> %>
+    <%# <a href="#" class="card-link">Another link</a> %>
   </div>
 </div>

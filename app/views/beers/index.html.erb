@@ -22,4 +22,4 @@
 
 <%#= button_to "Place an Order", new_order_path, params: {beer_1: @first_flavor_beer_1, beer_2: @first_flavor_beer_2, beer_3: @second_flavor_beer_1, beer_4: @second_flavor_beer_2, beer_5: @third_flavor_beer_1, beer_6: @third_flavor_beer_2 }, method: :get, class: "btn btn-custom btn-sm"%><br>
 <%= button_to "Place an Order", new_order_path, params: {beers: @beers}, method: :get %><br>
-<%= button_to "Try Again", search_page_path, :class => "button", :method => :get %> <br>
+<%= button_to "Choose Different Flavors", search_page_path, :class => "button", :method => :get %> <br>

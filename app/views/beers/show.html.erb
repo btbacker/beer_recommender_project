@@ -6,6 +6,9 @@
 <%= image_tag @beer.beer_image %><br><br>
 
 <%= "Style: #{@beer.beer_style}" %><br>
+Flavors: <% @beer.flavors.uniq.each do |flavor| %>
+    <%= button_to flavor.descriptor, flavor_path(flavor.id), :class => "button", :method => :get %>
+<% end %><br>
 <%= "ABV: #{@beer.abv}%" %><br>
 <%= "IBU: #{@beer.ibu}" %><br>
 <%= "Description: #{@beer.beer_description}" %><br><br>

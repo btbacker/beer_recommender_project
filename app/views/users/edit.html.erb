@@ -8,8 +8,9 @@
 <%= flash[:message] %>
 <%= form_for @user do |f| %>
     Username: <%=f.text_field :username %><br><br>
-    Password: <%=f.password_field :password_digest %><br><br>
     Location: <%=f.text_field :user_location %><br><br>
+    Please enter your password to confirm these changes: <br><br>
+    Password: <%=f.password_field :password_digest %><br><br>
     <%=f.submit %>
 <% end %>
 

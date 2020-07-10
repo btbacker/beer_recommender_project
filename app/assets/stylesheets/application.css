@@ -23,7 +23,7 @@ body {
 	font: 75% georgia, sans-serif;
 	line-height: 1.88889;
 	color: #555753; 
-	background: #CFDBC5 url(./beer_wall_opaque.jpg) no-repeat center; 
+	background: #CFDBC5 url(./beer_wall_opaque.jpg) center; 
 	margin: 10px; 
 	padding: 5px;
     }

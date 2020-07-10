@@ -9,7 +9,7 @@ class AuthController < ApplicationController
         if @user #&& @user.authenticate(params[:auth][:password])
             session[:user_id] = @user.id
             redirect_to user_path(@user)
-        else flash[:message] = "Please enter your username and password"
+        else flash.now[:alert] = ""
             render :login
         end
     end

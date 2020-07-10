@@ -13,3 +13,61 @@
  *= require_tree .
  *= require_self
  */
+ 
+
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	background: #CFDBC5 url(./beer_wall_opaque.jpg) no-repeat center; 
+	margin: 10px; 
+	padding: 5px;
+    }
+    
+p { 
+	margin-top: 10; 
+	text-align: justify;
+    }
+h2 { 
+    font: bold 1.4em georgia, sans-serif;
+    letter-spacing: 1px; 
+    margin-bottom: 0; 
+    color: #202020;
+    }
+h4 { 
+	font: bold 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #202020;
+    }
+h5 { 
+    font: bold 1.4em georgia, sans-serif;
+    letter-spacing: 1px; 
+    margin-bottom: 0; 
+    color: #202020;
+    }
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #202020;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #202020;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #202020;
+	}
+abbr {
+	border-bottom: none;
+	}
+.alert.alert-danger {
+	margin-bottom:15px;
+	padding:5px 10px;
+	}

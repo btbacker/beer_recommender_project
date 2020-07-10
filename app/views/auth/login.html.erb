@@ -7,11 +7,18 @@
     Incorrect username or password.
   </div>
 <% end %>
-
-<%= form_for :auth do |f| %>
-            <%= "Username" %>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <p class="card-text">
+      <%= form_for :auth do |f| %>
+            <%= "Username" %><br>
             <%= f.text_field :username %><br><br>
-            <%= "Password" %>
+            <%= "Password" %><br>
             <%= f.password_field :password %><br><br>
-  <%= f.submit 'Sign in', :class => 'btn btn-success' %>
-<% end %>
+            <%= f.submit 'Sign in', :class => 'btn btn-success' %>
+      <% end %>
+      </p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>

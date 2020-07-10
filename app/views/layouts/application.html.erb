@@ -25,13 +25,8 @@
             <a class="nav-link" href="../users/<%= current_user.id %>"> Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="../../users/<%= current_user.id %>/edit"> Edit Profile <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="http://localhost:3000/users/<%= current_user.id %>/edit"> Edit Profile <span class="sr-only">(current)</span></a>
           </li>
-
-          <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Our Beer Flavors
-            </a>
 
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="http://localhost:3000/flavors">Flavors</a>

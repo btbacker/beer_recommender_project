@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
     before_action :current_user, only: [:index, :show, :create]
-    # before_action :redirect_user
  
     def index
     
@@ -46,7 +45,6 @@ class UsersController < ApplicationController
     end
 
     def destroy
-        # byebug
         @user = User.find(current_user[:id])
         @user.delete
         redirect_to logout_path

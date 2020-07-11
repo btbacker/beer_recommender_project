@@ -7,10 +7,6 @@ class Beer < ApplicationRecord
     has_many :orders, through: :flights
     has_many :users, through: :likes
 
-    # validates :flavor_1, presence: true
-    # validates :flavor_2, presence: true
-    # validates :flavor_3, presence: true
-
     def all_beer_styles
         styles = Beer.all.map {|beer| beer.beer_style }.uniq
     end
@@ -20,10 +16,6 @@ class Beer < ApplicationRecord
         @beer = @flavor[0].beers.sample
     end
 
-    # def self.find_beers_for_flight(beer_id)
-    #     Beer.find(beer_id)
-    # end
-
     def self.dedupe
         grouped = all.group_by{|beer| [beer.beer_name, beer.brewery, beer.beer_description] }
         grouped.values.each do |duplicates|
@@ -31,6 +23,5 @@ class Beer < ApplicationRecord
           duplicates.each{|double| double.destroy}
         end
     end
-
 
 end

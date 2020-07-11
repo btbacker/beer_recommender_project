@@ -4,18 +4,31 @@ class BeersFlavor < ApplicationRecord
     belongs_to :flavor
 
     def self.beers_flavors_data
-         beers_flavors = {"IPA - American" => [1, 3, 25], "Wheat Beer - Witbier" => [2, 17, 13], "IPA - Session / India Session Ale" => [1, 4, 13], "IPA - English" => [1, 25, 3], "Lager - American" => [22, 19, 25], "Red Ale - American Amber / Red" => [20, 32, 29], "Pale Ale - American" => [4, 22, 17], "Wheat Beer - American Pale Wheat" => [2, 17, 13], "Shandy / Radler" => [3, 22, 13], "Belgian Blonde" => [28, 4, 25], "Belgian Tripel" => [1, 25, 28], "Golden Ale" => [25, 19, 22], "Belgian Strong Golden Ale" => [8, 1, 4], "Brown Ale - English" => [19, 20, 29], "Pumpkin / Yam Beer" => [27, 29, 4], "Red Ale - Irish" => [20, 32, 29], "Bock - Hell / Maibock / Lentebock" => [28, 29, 1], "Red Ale - Imperial / Double" => [1, 32, 20], "Strong Ale - American" => [28, 8, 20], "Scotch Ale / Wee Heavy" => [20, 32, 10], "IPA - Imperial / Double" => [14, 28, 1], "Belgian Quadrupel" => [10, 20, 32],"California Common" => [20, 1, 9], "Belgian Strong Dark Ale" => [28, 10, 8], "Winter Ale" => [10, 28, 29], "Pale Ale - Belgian" => [20, 25, 29], "Sour - Fruited Gose" => [3, 13, 26], "English Bitter" => [7, 19, 20], "Lager - American Amber / Red" => [9, 20, 25], "Brown Ale - American" => [10, 20, 29], "Fruit Beer" => [3, 17, 22], "Belgian Dubbel" => [20, 29, 28], "Stout - Imperial / Double Coffee" => [8, 15, 23], "Blonde Ale" => [9, 19, 20], "Lager - Dark" => [10, 20, 23], "Pale Ale - English" => [1, 19, 20], "Porter - American" => [10, 11, 23], "Lager - Pale" => [19, 25, 29], "Sour - Flanders Red Ale" => [3, 25, 26],"Altbier" => [7, 11, 20], "IPA - New England" => [3, 14, 17], "Lager - American Light" => [9, 11, 19], "Lager - Munich Dunkel" => [10, 20, 25], "Lager - Helles" => [20, 25, 29], "Wheat Beer - Other" => [3, 19, 2], "Lager - IPL (India Pale Lager)" => [9, 19, 1], "Märzen" => [9, 20, 29], "Pilsner - Czech" => [9, 19, 25], "Pilsner - Other" => [9, 19, 31], "Schwarzbier" => [10, 20, 23], "Lager - Euro Pale" => [9, 19, 25], "Lager - Euro Dark" => [9, 23, 25], "Kölsch" => [9, 11, 19], "Lager - Amber" => [9, 20, 25], "Lager - Vienna" => [1, 19, 20], "Lager - Dortmunder / Export" => [19, 20, 25], "Lager - Winter" => [10, 29, 32], "Lager - Japanese Rice" => [9, 11, 19], "Bock - Single / Traditional" => [19, 20, 25], "Pilsner - German" => [9, 19, 22]}
+         beers_flavors = {"IPA - American" => ["Hoppy", "Fruity", "Smooth"], "Wheat Beer - Witbier" => ["Wheat", "Juicy", "Funky"], "IPA - Session / India Session Ale" => ["Hoppy", "Aromatic", "Funky"], "IPA - English" => ["Hoppy", "Smooth", "Fruity"], "Lager - American" => ["Refreshing", "Light", "Smooth"], "Red Ale - American Amber / Red" => ["Malty", "Toffee", "Sweet"], "Pale Ale - American" => ["Aromatic", "Refreshing", "Juicy"], "Wheat Beer - American Pale Wheat" => ["Wheat", "Juicy", "Funky"], "Shandy / Radler" => ["Fruity", "Refreshing", "Funky"], "Belgian Blonde" => ["Strong", "Aromatic", "Smooth"], "Belgian Tripel" => ["Hoppy", "Smooth", "Strong"], "Golden Ale" => ["Smooth", "Light", "Refreshing"], "Belgian Strong Golden Ale" => ["Boozy", "Hoppy", "Aromatic"], "Brown Ale - English" => ["Light", "Malty", "Sweet"], "Pumpkin / Yam Beer" => ["Sweet", "Sweet", "Aromatic"], "Red Ale - Irish" => ["Malty", "Toffee", "Sweet"], "Bock - Hell / Maibock / Lentebock" => ["Strong", "Sweet", "Hoppy"], "Red Ale - Imperial / Double" => ["Hoppy", "Toffee", "Malty"], "Strong Ale - American" => ["Strong", "Boozy", "Malty"], "Scotch Ale / Wee Heavy" => ["Malty", "Toffee", "Dark"], "IPA - Imperial / Double" => ["Hazy", "Strong", "Hoppy"], "Belgian Quadrupel" => ["Dark", "Malty", "Toffee"],"California Common" => ["Malty", "Hoppy", "Clean"], "Belgian Strong Dark Ale" => ["Strong", "Dark", "Boozy"], "Winter Ale" => ["Dark", "Strong", "Sweet"], "Pale Ale - Belgian" => ["Malty", "Smooth", "Sweet"], "Sour - Fruited Gose" => ["Fruity", "Funky", "Sour"], "English Bitter" => ["Bitter", "Light", "Malty"], "Lager - American Amber / Red" => ["Clean", "Malty", "Smooth"], "Brown Ale - American" => ["Dark", "Malty", "Sweet"], "Fruit Beer" => ["Fruity", "Juicy", "Refreshing"], "Belgian Dubbel" => ["Malty", "Sweet", "Strong"], "Stout - Imperial / Double Coffee" => ["Boozy", "Heavy", "Roasty"], "Blonde Ale" => ["Clean", "Light", "Malty"], "Lager - Dark" => ["Dark", "Malty", "Roasty"], "Pale Ale - English" => ["Hoppy", "Light", "Malty"], "Porter - American" => ["Dark", "Dry", "Roasty"], "Lager - Pale" => ["Light", "Smooth", "Sweet"], "Sour - Flanders Red Ale" => ["Fruity", "Smooth", "Sour"],"Altbier" => ["Bitter", "Dry", "Malty"], "IPA - New England" => ["Fruity", "Hazy", "Juicy"], "Lager - American Light" => ["Clean", "Dry", "Light"], "Lager - Munich Dunkel" => ["Dark", "Malty", "Smooth"], "Lager - Helles" => ["Malty", "Smooth", "Sweet"], "Wheat Beer - Other" => ["Fruity", "Light", "Wheat"], "Lager - IPL (India Pale Lager)" => ["Clean", "Light", "Hoppy"], "Märzen" => ["Clean", "Malty", "Sweet"], "Pilsner - Czech" => ["Clean", "Light", "Smooth"], "Pilsner - Other" => ["Clean", "Light", "Thin"], "Schwarzbier" => ["Dark", "Malty", "Roasty"], "Lager - Euro Pale" => ["Clean", "Light", "Smooth"], "Lager - Euro Dark" => ["Clean", "Roasty", "Smooth"], "Kölsch" => ["Clean", "Dry", "Light"], "Lager - Amber" => ["Clean", "Malty", "Smooth"], "Lager - Vienna" => ["Hoppy", "Light", "Malty"], "Lager - Dortmunder / Export" => ["Light", "Malty", "Smooth"], "Lager - Winter" => ["Dark", "Sweet", "Toffee"], "Lager - Japanese Rice" => ["Clean", "Dry", "Light"], "Bock - Single / Traditional" => ["Light", "Malty", "Smooth"], "Pilsner - German" => ["Clean", "Light", "Refreshing"]}
     end
 
-
-    # Needs to be fixed to properly seed data
-    def self.beers_flavors
+    def self.create_beers_flavors
         beer_styles = BeersFlavor.beers_flavors_data
         beer_styles.each do |beers_flavor|
-            beers = Beer.all.select do |beer|
-                this_beer = beer.beer_style == beers_flavor[0]
-                this_beer.each {|beer| BeersFlavor.create(beer_id: this_beer.id, flavor_id: 22)}
-            end    
+            beers = Beer.all.select { |beer| beer.beer_style == beers_flavor[0] }
+            beers.each do |beer|
+                BeersFlavor.create(beer_id: beer.id, flavor_id: BeersFlavor.find_flavor(beers_flavor[1][0]))
+                BeersFlavor.create(beer_id: beer.id, flavor_id: BeersFlavor.find_flavor(beers_flavor[1][1]))
+                BeersFlavor.create(beer_id: beer.id, flavor_id: BeersFlavor.find_flavor(beers_flavor[1][2]))
+            end
+        end
+    end
+
+    def self.find_flavor(flavor)
+        flavor = Flavor.where(descriptor: flavor)
+        flavor[0].id
+    end
+
+    def self.dedupe
+        grouped = all.group_by{|beers_flavor| [beers_flavor.beer_id, beers_flavor.flavor_id] }
+        grouped.values.each do |duplicates|
+          first_one = duplicates.shift
+          duplicates.each{|double| double.destroy}
         end
     end
 

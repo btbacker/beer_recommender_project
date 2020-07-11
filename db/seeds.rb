@@ -1,16 +1,16 @@
 require './app/adapter/api_link.rb'
 
-# Beer.destroy_all 
-# Flavor.destroy_all 
-# BeersFlavor.destroy_all 
+Beer.destroy_all 
+Flavor.destroy_all 
+BeersFlavor.destroy_all 
 
-# Beer seed data:
-# ApiLink.get_data("Beer")
+Beer seed data:
+ApiLink.get_data("Beer")
 
-# Flavor seed data:
-# Flavor.create_essential
+Flavor seed data:
+Flavor.create_essential
 
-# BeersFlavor seed data:
-
+BeersFlavor seed data:
+BeersFlavor.create_beers_flavors
 
 puts "Seeds done!"

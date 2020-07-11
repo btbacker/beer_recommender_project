@@ -9,9 +9,6 @@
 <%= form_for(:beer, url: beers_path, method: :get) do |f| %>
     <p>
     <%= f.collection_check_boxes(:flavor_ids, Flavor.all, :descriptor, :descriptor, :include_hidden => false) %><br>
-       <%#= text_field_tag :flavor_1, params[:flavor_1] %>
-       <%#= text_field_tag :flavor_2, params[:flavor_2] %>
-       <%#= text_field_tag :flavor_3, params[:flavor_3] %><br>
       <%= f.submit "Search", :name => nil %>
     </p>
 <% end %>

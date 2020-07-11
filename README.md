@@ -13,7 +13,7 @@ Built With:
 
 Installation
 
-Run this project as a Rails server in your local browser.
+Run this project as a Rails server in your local browser. The initial page can be found at http://localhost:3000/login.
 
 Clone Repo from:
 https://github.com/btbacker/beer_recommender_project

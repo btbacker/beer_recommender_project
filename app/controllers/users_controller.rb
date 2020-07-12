@@ -50,9 +50,10 @@ class UsersController < ApplicationController
         redirect_to logout_path
     end
 
-private
+    private
 
     def user_params
         params.require(:user).permit(:username, :password_digest, :user_location)
     end
+
 end

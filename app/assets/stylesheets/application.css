@@ -14,7 +14,6 @@
  *= require_self
  */
  
-
 html {
 	margin: 0;
 	padding: 0;
@@ -26,8 +25,7 @@ body {
 	background: #CFDBC5 url(./beer_wall_opaque.jpg) center; 
 	margin: 10px; 
 	padding: 5px;
-    }
-    
+    }  
 p { 
 	margin-top: 10; 
 	text-align: justify;

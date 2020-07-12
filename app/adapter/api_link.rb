@@ -10,5 +10,5 @@ class ApiLink
             Beer.create(beer_name: beer["beer"]["beer_name"], brewery: beer["brewery"]["brewery_name"], beer_style: beer["beer"]["beer_style"], beer_description: beer["beer"]["beer_description"], country: beer["brewery"]["country_name"], abv: beer["beer"]["beer_abv"], ibu: beer["beer"]["beer_ibu"], beer_image: beer["beer"]["beer_label"], brewery_city: beer["brewery"]["location"]["brewery_city"], brewery_region: beer["brewery"]["location"]["brewery_state"], brewery_active: beer["brewery"]["brewery_active"], brewery_latitude: beer["brewery"]["location"]["lat"], brewery_longitude: beer["brewery"]["location"]["lng"])
         end
     end
-    # "beers": "beer_name", "brewery", "beer_style", "beer_description", "country", "abv", "ibu", "beer_image", "brewery_city", "brewery_region", "brewery_active", "brewery_latitude", "brewery_longitude"
+
 end
